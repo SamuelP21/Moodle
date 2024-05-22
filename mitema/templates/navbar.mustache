@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    
+    <div class="container">
+    <img src="{{output.get_compact_logo_url}}" alt="{{ sitename }}">
+        <a class="navbar-brand" href="{{ config.wwwroot }}">{{ sitename }}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ config.wwwroot }}/my">{{#str}}myhome,my{{/str}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ config.wwwroot }}/course">{{#str}}courses,catalogue{{/str}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ config.wwwroot }}/admin">{{#str}}administration,admin{{/str}}</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ config.wwwroot }}/login">{{#str}}login{{/str}}</a>
+                </li>
+            </ul>
+            {{#primarymoremenu}}
+                <div class="primary-navigation">
+                    {{> core/moremenu}}
+                </div>
+            {{/primarymoremenu}}
+            
+        </div>
+    </div>
+</nav>

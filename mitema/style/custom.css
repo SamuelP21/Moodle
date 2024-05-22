@@ -1,0 +1,27 @@
+body {
+    background-color: #f5f5f5;
+}
+
+#page-header {
+    background-color: #0044cc;
+    color: #ffffff;
+}
+
+.btn-color{
+    background-color: #E19235; /* Color azul claro */
+    color: #fff; /* Color del texto */
+}
+
+.btn-color:hover{
+    background-color: #80521C; /* Color azul claro */
+    color: #fff; /* Color del texto */
+}
+
+.custom-col {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+}

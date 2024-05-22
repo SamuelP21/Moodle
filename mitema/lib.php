@@ -17,14 +17,14 @@
 /**
  * Theme functions.
  *
- * @package    theme_rengar
+ * @package    theme_mitema
  * @copyright  2016 Frédéric Massart - FMCorz.net
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-function theme_rengar_get_main_scss_content($theme) {                                                                                
+function theme_mitema_get_main_scss_content($theme) {                                                                                
     global $CFG;                                                                                                                    
                                                                                                                                     
     $scss = '';                                                                                                                     
@@ -39,8 +39,8 @@ function theme_rengar_get_main_scss_content($theme) {
         // We still load the default preset files directly from the boost theme. No sense in duplicating them.                      
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/plain.scss');                                          
                                                                                                                                     
-    } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_rengar', 'preset', 0, '/', $filename))) {              
-        // This preset file was fetched from the file area for theme_rengar and not theme_boost (see the line above).                
+    } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_mitema', 'preset', 0, '/', $filename))) {              
+        // This preset file was fetched from the file area for theme_mitema and not theme_boost (see the line above).                
         $scss .= $presetfile->get_content();                                                                                        
     } else {                                                                                                                        
         // Safety fallback - maybe new installs etc.                                                                                
@@ -48,9 +48,9 @@ function theme_rengar_get_main_scss_content($theme) {
     }    
     
     // Pre CSS - esto se carga DESPUÉS de cualquier presión desde la configuración pero antes del scss principal.                                        
-    $pre = file_get_contents($CFG->dirroot . '/theme/rengar/scss/pre.scss');                                                         
+    $pre = file_get_contents($CFG->dirroot . '/theme/mitema/scss/pre.scss');                                                         
     // Post CSS - lo mismo que lo de arriba pero al reves.                                    
-    $post = file_get_contents($CFG->dirroot . '/theme/rengar/scss/post.scss');  
+    $post = file_get_contents($CFG->dirroot . '/theme/mitema/scss/post.scss');  
                                                                                                                                     
      // Combine them together.                                                                                                       
      return $pre . "\n" . $scss . "\n" . $post;                                                                                                                  
